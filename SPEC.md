@@ -35,4 +35,11 @@
 
 | 메서드 | 주소 | 하는 일 | 담당 |
 | --- | --- | --- | --- |
-| | | | |
+| GET | /api/products | 상품 목록 | 혼자 |
+
+## 주소 약속
+
+### 상품 목록
+- 주소: GET /api/products (로그인 없이 가능)
+- 응답 200: 상품 목록 — [{"id": 1, "title": "자전거", "price": 50000, "description": "...", "shipping_fee": null, "meeting_place": "강남역", "status": "판매중", "seller_id": 1, "created_at": "...", "images": [{"id": 1, "image_url": "/images/sample1.jpg"}]}]
+- 상태: 만듦

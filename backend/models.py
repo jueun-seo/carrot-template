@@ -1,6 +1,6 @@
 from datetime import datetime
 from sqlalchemy import ForeignKey
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from database import Base
 
 
@@ -32,6 +32,8 @@ class Product(Base):
   status: Mapped[str] = mapped_column(default='판매중')
   seller_id: Mapped[int] = mapped_column(ForeignKey('users.id'))
   created_at: Mapped[datetime] = mapped_column(default=datetime.now)
+
+  images: Mapped[list['ProductImage']] = relationship()
 
 
 class ProductImage(Base):
