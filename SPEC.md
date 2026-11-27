@@ -14,7 +14,9 @@
 | --- | --- | --- |
 | users | id · username · password_hash | — (시작 저장소에 있음) |
 | refresh_tokens | 로그인 유지용 | users (시작 저장소에 있음) |
-| | | |
+| products | id · title · price · description · shipping_fee · meeting_place · status(판매중 · 예약중 · 거래완료) · seller_id · created_at | seller_id → users |
+| product_images | id · product_id · image_url (사진 한 장이 한 줄) | product_id → products |
+| favorites | id · user_id · product_id (찜 한 번이 한 줄) | users · products |
 
 ## 기능
 
